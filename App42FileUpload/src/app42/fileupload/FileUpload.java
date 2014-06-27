@@ -46,6 +46,7 @@ public class FileUpload extends MIDlet {
 		UploadService uploadService = sp.buildUploadService();
 
 		try {
+			  // This test.txt File pic from res folder.
 			InputStream stream = getClass().getResourceAsStream("/test.txt");
 			System.out.println("Input Stream " + stream);
 			UploadFileType filetype = null;
