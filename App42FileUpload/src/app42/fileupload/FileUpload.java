@@ -46,11 +46,11 @@ public class FileUpload extends MIDlet {
 		UploadService uploadService = sp.buildUploadService();
 
 		try {
-			InputStream stream = getClass().getResourceAsStream("/test.txt");
-			System.out.println("Input Stream " + stream);
+			InputStream stream = getClass().getResourceAsStream("/Desert.jpg");
 			UploadFileType filetype = null;
 			String uploadFiletype = filetype.IMAGE;
-			Upload upload = uploadService.uploadFile("Dummy File", stream,
+			// PLease make sure file name must contain the extention of file, image etc..
+			Upload upload = uploadService.uploadFile("Dummy File.jpg", stream,
 					uploadFiletype, "My File Description.");
 			// Fetch the returned JSON response
 			System.out
